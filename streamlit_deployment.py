@@ -105,6 +105,6 @@ if st.button("Generate 5 Images"):
     cols = st.columns(5)
     for i, img in enumerate(images):
         with cols[i]:
-            st.image(img, width=100, clamp=True, caption=f"#{i+1}")
+            st.image(img, width=100, clamp=True, caption=f"Sample {i+1}")
 
 
