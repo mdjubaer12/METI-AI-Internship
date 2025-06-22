@@ -93,9 +93,9 @@ def generate_digit_images(model, digit, num_images=5):
 
 st.set_page_config(page_title="VAE Digit Generator", layout="centered")
 st.title("Handwritten Digit Generator")
-st.markdown("Select a digit (0-9) and generate handwritten images conditioned on it.")
+st.markdown("Generate synthetic MNIST-like images using my trained model")
 
-digit = st.selectbox("Choose digit:", list(range(10)))
+digit = st.selectbox("Choose a digit:", list(range(10)))
 
 if st.button("Generate 5 Images"):
     model = load_model()
@@ -108,13 +108,3 @@ if st.button("Generate 5 Images"):
             st.image(img, width=100, clamp=True, caption=f"#{i+1}")
 
 
-# requirements.txt
-"""
-streamlit
-torch
-torchvision
-matplotlib
-Pillow
-numpy
-
-"""
